@@ -1,4 +1,6 @@
-# emailgen
+EmailGen
+========
+
 Python Email Generation for Humans
 
 EmailGen is a python port of the great mailgen engine for Node.js. Check their
