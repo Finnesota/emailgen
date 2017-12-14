@@ -8,7 +8,7 @@ class Email(object):
         self.name = name
         self.intros = []
         self.dictionary = []
-        # self.table =
+        self.table = None
         self.actions = []
         self.outros = []
         self.greeting = "Hey"
@@ -22,6 +22,9 @@ class Email(object):
 
     def add_dictionary(self, key, value):
         self.dictionary.append((key, value))
+
+    def add_table(self, table):
+        self.table = table
 
     def add_action(self, text, button):
         self.actions.append((text, button))
@@ -40,3 +43,13 @@ class Button(object):
         self.text = text
         self.link = link
         self.color = color
+
+
+class Table(object):
+
+    def __init__(self, headers):
+        self.headers = headers
+        self.rows = []
+
+    def add_row(self, row):
+        self.rows.append(row)

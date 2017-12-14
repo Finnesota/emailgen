@@ -37,9 +37,16 @@ the content pieces you want and then generating the email with your newly
 configured generator.
 
 ```python
+table = emailgen.Table(["Service", "Maintenance Window"])  # Enter in the headers
+table.add_row(["Service A", "Jan 1 00:00 - Jan 1: 01:00"])  # Enter in the values for the columns
+table.add_row(["Service B", "Jan 1 01:00 - Jan 1: 02:00"])  #  in the same order as the headers
+table.add_row(["Service C", "Jan 1 02:00 - Jan 1: 03:00"])
+table.add_row(["Service D", "Jan 1 03:00 - Jan 1: 04:00"])
+
 email = emailgen.Email("John Doe")  # Enter in the name of the recipient
 email.add_intro("Welcome to our product! We're very excited to have you on board.")
-email.add_action("To get started with Hermes, please click here:",
+email.add_table(table)
+email.add_action("To get started with Example, please click here:",
                  emailgen.Button("Confirm your account", "http://example.com/confirm-account"))
 email.add_outros("Need help, or have questions? Just reply to this email, we'd love to help.")
 
