@@ -305,7 +305,7 @@ DEFAULT_THEME = {
                             <td class="email-masthead">
                                 <a class="email-masthead_name" href="{{ generator.product[" link"] }}" target="_blank">
                                 {% if generator.product["logo"] %}
-                                <img src="{{ generator.product[" logo"] }}" class="email-logo" />
+                                <img src="{{ generator.product["logo"] }}" class="email-logo" />
                                 {% else %}
                                 {{ generator.product["name"] }}
                                 {% endif %}
